@@ -3,6 +3,7 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "dependencies": {
+    "@clerk/expo": "^4.3.0",
     "@expo/metro-runtime": "~6.1.2",
     "@expo/ui": "~0.2.0-beta.9",
     "babel-preset-expo": "~54.0.10",
@@ -14,6 +15,7 @@
     "expo-image": "~3.0.11",
     "expo-linking": "~8.0.12",
     "expo-router": "~6.0.24",
+    "expo-secure-store": "~15.0.8",
     "expo-splash-screen": "~31.0.13",
     "expo-status-bar": "~3.0.9",
     "expo-symbols": "~1.0.8",
