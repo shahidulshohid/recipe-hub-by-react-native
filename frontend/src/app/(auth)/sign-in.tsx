@@ -1,14 +1,16 @@
+import useSocialAuth from "@/hooks/useSocialAuth";
 import { Image, Pressable, Text, View } from "react-native"
 
 
 const SignInScreen = () => {
+    const { handleSocialAuth } = useSocialAuth()
     return (
         <View
-        className="bg-black"
+            className="bg-black"
         >
             <Image source={require("../../../assets/images/hero.jpg")} className="w-full h-72" />
             <View
-                className="mt-12 bg-white rounded-[30px] p-12 mb-16"   
+                className="mt-12 bg-white rounded-[30px] p-12 mb-16"
             >
                 <View
                     className="flex gap-2 items-center"
@@ -26,6 +28,7 @@ const SignInScreen = () => {
                 </View>
                 <View className="mt-6 gap-4 flex items-center">
                     <Pressable
+                        onPress={() => handleSocialAuth("oauth_google")}
                         className="flex flex-row items-center justify-center gap-4 w-full border border-ebb py-2 rounded-full">
                         <Image
                             source={require("../../../assets/images/google.jpg")}
@@ -36,6 +39,7 @@ const SignInScreen = () => {
                         </Text>
                     </Pressable>
                     <Pressable
+                        onPress={() => handleSocialAuth("oauth_apple")}
                         className="flex flex-row items-center justify-center bg-black gap-4 w-full border border-ebb py-1 rounded-full">
                         <Image
                             source={require("../../../assets/images/apple.png")}
