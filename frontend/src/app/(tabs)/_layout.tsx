@@ -46,9 +46,9 @@ function CustomTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
                 } else if (cleanName === "search") {
                     iconName = isFocused ? "search" : "search-outline";
                     displayLabel = "Search";
-                } else if (cleanName === "recipes") {
-                    iconName = isFocused ? "restaurant" : "restaurant-outline";
-                    displayLabel = "Recipes";
+                } else if (cleanName === "favourite" || cleanName === "favorites") {
+                    iconName = isFocused ? "heart" : "heart-outline";
+                    displayLabel = "Favourite";
                 } else if (cleanName === "profile") {
                     iconName = isFocused ? "person" : "person-outline";
                     displayLabel = "Profile";
@@ -119,9 +119,9 @@ export default function AuthRoutesLayout() {
                 }}
             />
             <Tabs.Screen
-                name="recipes"
+                name="favourite"
                 options={{
-                    title: "Recipes",
+                    title: "Favourite",
                 }}
             />
             <Tabs.Screen
